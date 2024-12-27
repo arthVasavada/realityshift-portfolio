@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-22.04  # Use the current stable runner
+    runs-on: ubuntu-22.04
 
     steps:
       - name: Checkout code
@@ -16,7 +16,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16  # Firebase CLI requires Node.js 16+
+          node-version: 18  # Use Node.js 18 for structuredClone support
 
       - name: Install dependencies
         run: npm ci
