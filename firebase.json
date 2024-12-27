@@ -1,0 +1,19 @@
+{
+  "hosting": {
+    "public": "dist",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
+    "redirects": [
+      {
+        "source": "https://realityshift.xyz/**",
+        "destination": "https://www.realityshift.xyz",
+        "type": 301
+      }
+    ]
+  }
+}
