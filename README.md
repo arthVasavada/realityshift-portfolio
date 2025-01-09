@@ -1,50 +1,90 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# RealityShift Portfolio 🚀
 
-Currently, two official plugins are available:
+This is a modern, animated portfolio website built with **React**, **TypeScript**, **Vite**, **TailwindCSS**, and **Framer Motion**. It features pages for showcasing projects, an interactive contact form powered by **EmailJS**, and theme toggling between light and dark modes.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🌟 Features
+- **Interactive Contact Form**: Integrated with EmailJS for email submissions.
+- **Theme Switching**: Toggle between light and dark modes using TailwindCSS.
+- **Framer Motion Animations**: Smooth page transitions and hover effects.
+- **Responsive Design**: Fully responsive for all devices.
+- **Vite Development**: Fast development and optimized builds.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+---
 
-- Configure the top-level `parserOptions` property like this:
+## 🛠️ Tech Stack
+- **Frontend**: React, TypeScript, TailwindCSS
+- **Animations**: Framer Motion
+- **Form Handling**: EmailJS
+- **Build Tool**: Vite
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## 🔧 Installation & Setup
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/realityshift-portfolio.git
+   ```
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+2. Navigate to the project directory:
+   ```bash
+   cd realityshift-portfolio
+   ```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+4. Create a `.env` file in the root directory:
+   ```plaintext
+   VITE_EMAILJS_SERVICE_ID=your_service_id
+   VITE_EMAILJS_TEMPLATE_ID=your_template_id
+   VITE_EMAILJS_API_KEY=your_api_key
+   ```
+
+5. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+---
+
+## 🚀 Deployment
+### Deploying to Firebase Hosting
+1. Build the project:
+   ```bash
+   npm run build
+   ```
+
+2. Deploy to Firebase:
+   ```bash
+   firebase deploy
+   ```
+
+---
+
+## 📸 Screenshots
+![Home Page](https://via.placeholder.com/800x400) <!-- Replace with your actual screenshots -->
+![Projects Page](https://via.placeholder.com/800x400)
+
+---
+
+## 🙌 Contributions
+Feel free to fork this project, make your changes, and submit a pull request. All contributions are welcome!
+
+---
+
+## 📝 License
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## 👤 Author
+**Arth Vasavada**
+
+- Website: [realityshift.xyz](https://www.realityshift.xyz)
+- GitHub: [arthVasavada](https://github.com/arthVasavada)
+- Email: [arth.vasavada@realityshift.xyz](mailto:arth.vasavada@realityshift.xyz)
