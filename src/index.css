@@ -5,3 +5,16 @@
 body{
   @apply bg-gray-800;
 }
+
+.dark body{
+  @apply bg-gray-100;
+}
+
+.logo {
+  filter: invert(1); /* Invert for light mode */
+  transition: filter 0.3s ease; /* Smooth transition between themes */
+}
+
+.dark .logo {
+  filter: none; /* Keep original for dark mode */
+}

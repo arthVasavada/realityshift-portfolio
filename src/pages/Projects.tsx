@@ -15,17 +15,19 @@ const projects = [
   {
     id: 2,
     title: "E-Commerce Platform",
-    description: "Another fantastic project description.",
-    imgUrl: "/assets/project2.png",
-    demoLink: "https://project2-demo.com",
+    description:
+      "GlowCart Ecom is a full-stack e-commerce application styled with a Tailwind Amazon-like look. It uses React + Vite on the frontend and a Node/Express backend (deployed via Firebase Functions) with PayPal integration.",
+    imgUrl: "/assets/glowcart_ss.jpg",
+    demoLink: "https://glowcart-ecom.firebaseapp.com/",
     codeLink: "https://github.com/username/project2",
   },
   {
     id: 3,
-    title: "Project 3",
-    description: "A mind-blowing project description.",
-    imgUrl: "/assets/project3.png",
-    demoLink: "https://project3-demo.com",
+    title: "Water Store Manager",
+    description:
+      "A full-stack CRUD application for managing Aquazone water store customers and their bottle counts. Built with React (TypeScript), Firebase Authentication, Cloud Firestore, Tailwind CSS, and Framer Motion.",
+    imgUrl: "/assets/aquazone_ss.jpg",
+    demoLink: "https://aquazone-crud.firebaseapp.com/",
     codeLink: "https://github.com/username/project3",
   },
 ];
@@ -65,27 +67,24 @@ const Projects: React.FC = () => {
   return (
     <motion.section
       id="projects"
-      className="h-screen-minus-navbar bg-gray-800 text-white p-10 pt-16 overflow-hidden"
+      className="h-screen-minus-navbar bg-gray-800 dark:bg-gray-100 text-white dark:text-gray-800 p-10 pt-16 overflow-hidden transition-colors duration-300"
       initial={{ y: "100%", opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       exit={{ y: "100%", opacity: 0 }}
       transition={{ duration: 0.8, ease: "easeInOut" }}
     >
-      <h2 className="text-3xl font-extralight text-teal-400 mb-6 text-center">
+      <h1 className="text-4xl font-extralight text-teal-400 dark:text-orange-400 mb-4 text-center mt-8">
         Projects
-      </h2>
+      </h1>
       <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-11"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
         {projects.map((project) => (
           <motion.div key={project.id} variants={itemVariants}>
-            <ProjectCard
-              {...project}
-              onCardClick={handleCardClick}
-            />
+            <ProjectCard {...project} onCardClick={handleCardClick} />
           </motion.div>
         ))}
       </motion.div>
@@ -98,15 +97,16 @@ const Projects: React.FC = () => {
           animate="visible"
           exit="exit"
           variants={popupVariants}
+          onClick={closePopup} // Close on overlay click
         >
           <motion.div
-            className="relative w-11/12 max-w-4xl h-3/4 bg-gray-900 rounded-lg shadow-lg overflow-hidden"
+            className="relative w-11/12 max-w-4xl h-3/4 bg-gray-900 dark:bg-gray-200 rounded-lg shadow-lg overflow-hidden"
             variants={popupVariants}
             onClick={(e) => e.stopPropagation()} // Prevent closing on inner click
           >
             <button
               onClick={closePopup}
-              className="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600"
+              className="absolute top-4 right-4 bg-red-500 dark:bg-red-400 text-white dark:text-gray-800 px-3 py-1 rounded hover:bg-red-600 dark:hover:bg-red-500"
             >
               Close
             </button>
