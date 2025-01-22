@@ -14,12 +14,12 @@ const projects = [
   },
   {
     id: 2,
-    title: "E-Commerce Platform",
+    title: "Movie Recommendation Platform",
     description:
-      "GlowCart Ecom is a full-stack e-commerce application styled with a Tailwind Amazon-like look. It uses React + Vite on the frontend and a Node/Express backend (deployed via Firebase Functions) with PayPal integration.",
-    imgUrl: "/assets/glowcart_ss.jpg",
-    demoLink: "https://glowcart-ecom.firebaseapp.com/",
-    codeLink: "https://github.com/username/project2",
+      "CineScope is a modern, feature-rich movie recommendation app designed to showcase API consumption, routing, and state management capabilities. It leverages Vite, React, TypeScript, TailwindCSS, and Framer Motion to deliver a seamless and visually appealing user experience.",
+    imgUrl: "/assets/cine-scope_ss.jpg",
+    demoLink: "https://cine-scope-cb754.web.app/",
+    codeLink: "https://github.com/arthVasavada/cine-scope",
   },
   {
     id: 3,
@@ -28,7 +28,7 @@ const projects = [
       "A full-stack CRUD application for managing Aquazone water store customers and their bottle counts. Built with React (TypeScript), Firebase Authentication, Cloud Firestore, Tailwind CSS, and Framer Motion.",
     imgUrl: "/assets/aquazone_ss.jpg",
     demoLink: "https://aquazone-crud.firebaseapp.com/",
-    codeLink: "https://github.com/username/project3",
+    codeLink: "https://github.com/arthVasavada/aquazone-crud",
   },
 ];
 
@@ -67,7 +67,7 @@ const Projects: React.FC = () => {
   return (
     <motion.section
       id="projects"
-      className="h-screen-minus-navbar bg-gray-800 dark:bg-gray-100 text-white dark:text-gray-800 p-10 pt-16 overflow-hidden transition-colors duration-300"
+      className="min-h-screen bg-gray-800 dark:bg-gray-100 text-white dark:text-gray-800 p-6 pt-16 overflow-auto md:overflow-hidden transition-colors duration-300"
       initial={{ y: "100%", opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       exit={{ y: "100%", opacity: 0 }}
@@ -100,7 +100,7 @@ const Projects: React.FC = () => {
           onClick={closePopup} // Close on overlay click
         >
           <motion.div
-            className="relative w-11/12 max-w-4xl h-3/4 bg-gray-900 dark:bg-gray-200 rounded-lg shadow-lg overflow-hidden"
+            className="relative w-11/12 max-w-4xl h-[80vh] md:h-3/4 bg-gray-900 dark:bg-gray-200 rounded-lg shadow-lg overflow-auto"
             variants={popupVariants}
             onClick={(e) => e.stopPropagation()} // Prevent closing on inner click
           >

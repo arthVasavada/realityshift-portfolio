@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { useTheme } from "../context/ThemeContext"; // Import ThemeContext
+import { useTheme } from "../context/ThemeContext";
 
 const Home: React.FC = () => {
   const [targetPage, setTargetPage] = useState<string | null>(null); // Track the target page
@@ -16,7 +16,7 @@ const Home: React.FC = () => {
   return (
     <motion.section
       id="home"
-      className="h-screen-minus-navbar pt-16 bg-gray-800 dark:bg-gray-100 text-white dark:text-gray-800 flex flex-col md:flex-row justify-center items-center gap-8 transition-colors duration-300"
+      className="min-h-screen pt-16 bg-gray-800 dark:bg-gray-100 text-white dark:text-gray-800 flex flex-col md:flex-row justify-center items-center gap-6 px-4 overflow-hidden transition-colors duration-300"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
@@ -29,16 +29,16 @@ const Home: React.FC = () => {
         exit={{ y: "-100%", opacity: 0 }}
         transition={{ duration: 1 }}
       >
-        <h1 className="text-5xl font-extralight mb-5">
+        <h1 className="text-4xl sm:text-5xl font-extralight mb-4 sm:mb-5 leading-tight">
           Hi, I’m{" "}
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-200 dark:from-orange-300 to-blue-500 dark:to-orange-500 animate-gradient bg-[length:200%_200%]">
             Arth Vasavada
           </span>
         </h1>
-        <p className="text-lg text-gray-400 dark:text-gray-600 mb-6">
+        <p className="text-base sm:text-lg text-gray-400 dark:text-gray-600 mb-5 sm:mb-6 leading-relaxed">
           A Full-Stack Developer creating interactive web applications.
         </p>
-        <div className="flex gap-4 justify-center md:justify-start">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
           <button
             onClick={() => handleNavigate("/projects")} // Navigate to Projects
             className="bg-teal-400 dark:bg-orange-400 text-gray-900 px-6 py-2 rounded hover:bg-teal-500 dark:hover:bg-orange-500"
@@ -56,7 +56,7 @@ const Home: React.FC = () => {
 
       {/* Right Section: Clickable Image */}
       <motion.div
-        className="w-64 h-64 rounded-full overflow-hidden border-2 border-teal-400 dark:border-orange-400 shadow-lg cursor-pointer"
+        className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full overflow-hidden border-2 border-teal-400 dark:border-orange-400 shadow-lg cursor-pointer"
         layoutId="profile-image" // Always apply layoutId for About
         whileHover={{ scale: 1.05 }}
         transition={{ type: "spring", stiffness: 50 }}
